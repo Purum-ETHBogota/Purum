@@ -19,6 +19,11 @@ export default function Header() {
             <a>Pledge</a>
           </Link>
         </li>
+        <li className={styles.menuItem}>
+          <Link href="/hash">
+            <a>Create Hash</a>
+          </Link>
+        </li>
         {isConnected && (
           <button onClick={disconnect} className={styles.menuLogout}>Disconnect</button>
         )}

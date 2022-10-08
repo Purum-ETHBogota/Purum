@@ -1,7 +1,45 @@
-.input {
-    box-sizing:border-box;
-  }
 .main {
-    text-align: center;
-    display: inline-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.container {
+  display: inline-flex;
+}
+.header{
+  font-size: 2rem;
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+.inputCoordinate {
+  margin: 10px;
+  width: 37vw;
+  height: 25px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #e7aee4;
+  background-color: #feeefe;
+  color: #000000;
+}
+
+.button {
+  width: 37vw;
+  height: 40px;
+  margin-top: 30px;
+  border-radius: 40px;
+  background: linear-gradient(238.59deg, #5FD3FF -18.96%, rgba(99, 214, 255, 0) 54.42%),
+  linear-gradient(96.53deg, #FFAE88 -3.19%, #8F93EA 105.27%);
+  color: #000000;
+  border: none;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.button:hover {
+  cursor: pointer;
 }
