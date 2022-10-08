@@ -1,17 +1,30 @@
 import Image from "next/image";
-import { useAccount } from "@web3modal/react";
+import { useAccount, useDisconnect } from "@web3modal/react";
 import styles from "../../styles/PledgeForm.module.css";
 
 export default function First({ handleNextStep }) {
   const { address } = useAccount();
+  const disconnect = useDisconnect();
 
   const randomizer = Math.trunc(Math.random() * 10);
 
   const truncatedAddress = `${address.slice(0, 5)}…${address.slice(-3)}`;
 
+  const handleBack = () => {
+    disconnect();
+  };
+
   return (
     <div className={styles.step}>
       <div>
+        <button className={styles.backButton} onClick={handleBack}>
+          <Image
+            src="/assets/icons/arrow.png"
+            alt="arrow back"
+            width={16}
+            height={16}
+          />
+        </button>
         <div className={styles.avatar}>
           <Image
             src={`/assets/icons/${randomizer}.png`}

@@ -2,6 +2,14 @@
     padding: 0 2rem;
 }
 
+.backButton {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+}
+
 .step {
     display: flex;
     flex-direction: column;

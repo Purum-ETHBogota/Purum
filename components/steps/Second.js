@@ -16,9 +16,21 @@ export default function Second({ handleNextStep }) {
     alert("Right now we don't allow more than 3 coordinates");
   };
 
+  const handleBack = () => {
+    handleNextStep(0);
+  };
+
   return (
     <div className={styles.step}>
       <div>
+        <button className={styles.backButton} onClick={handleBack}>
+          <Image
+            src="/assets/icons/arrow.png"
+            alt="arrow back"
+            width={16}
+            height={16}
+          />
+        </button>
         <div className={styles.avatar}>
           <Image
             src={`/assets/icons/mountain.png`}
