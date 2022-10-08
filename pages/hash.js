@@ -19,12 +19,12 @@ export default function Hash() {
         alert("Your Hash key has been copied to your clipboard! \nThis is your hash key: " + hashKey);
         copy(hashKey);
       };
-
+    
     return (
         <div className={styles.container}>
             <Header />
             <form className={styles.main} onSubmit={handleSubmit}>
-            <h1 className={styles.header}>Hash Page</h1>
+            <h1 className={styles.header}>Create your Hash</h1>
                 <label>
                 <h3>Coordinate 1</h3>
                 <InputMask
