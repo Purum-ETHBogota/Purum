@@ -1,0 +1,94 @@
+.container {
+    padding: 0 2rem;
+    position: relative;
+}
+
+.wallet {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    transform: scale(0.6);
+}
+
+.title {
+    font-family: 'Merriweather', serif;
+    color: #6a515e;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 150%;
+    text-align: left;
+    margin: 0;
+}
+
+.avatar {
+    height: 82px;
+    width: 82px;
+    border-radius: 50%;
+    background: #FBEAEB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px 20px;
+}
+
+.wrapper {
+    height: 100vh;
+    margin: auto;
+    padding-top: 130px;
+}
+
+.address {
+    margin: 0 0 20px;
+    color: #C7ABBA;
+    font-size: 24px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.nftData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.image {
+    border-radius: 21px;
+}
+
+.data {
+    margin: 10px;
+    width: 150px;
+}
+
+.attribute {
+    color: #C7ABBA;
+    font-size: 18px;
+    font-family: 'Dosis', sans-serif;
+    margin-right: 10px;
+}
+
+.value {
+    color: #6A515E;
+    font-size: 18px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.pledgeButton:active {
+    transform: scale(0.99);
+}
+
+.pledgeButton {
+    width: 300px;
+    height: 70px;
+    background: linear-gradient(238.59deg, #5FD3FF -18.96%, rgba(99, 214, 255, 0) 54.42%),
+    linear-gradient(96.53deg, #FFAE88 -3.19%, #8F93EA 105.27%);
+    color: white;
+    border-radius: 100px;
+    border: none;
+    margin: 0 auto;
+    font-family: 'Dosis', sans-serif;
+    font-size: 21px;
+}

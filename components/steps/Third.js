@@ -12,12 +12,24 @@ export default function Third({ handleNextStep }) {
     console.log("I generated it!");
   };
 
+  const handleBack = () => {
+    handleNextStep(1);
+  };
+
   return (
     <div className={styles.step}>
       <div>
+        <button className={styles.backButton} onClick={handleBack}>
+          <Image
+            src="/assets/icons/arrow.png"
+            alt="arrow back"
+            width={16}
+            height={16}
+          />
+        </button>
         <div className={styles.avatar}>
           <Image
-            src={`/assets/icons/mountain.png`}
+            src="/assets/icons/mountain.png"
             alt="Random icon"
             width={50}
             height={50}
@@ -36,7 +48,7 @@ export default function Third({ handleNextStep }) {
       </div>
       <button
         onClick={handleGenerateNFT}
-        disabled={Boolean(hash)}
+        disabled={hash ? false : true}
         className={styles.pledgeButton}
       >
         <span style={{ marginRight: "20px" }}>{"Pledge"}</span>
