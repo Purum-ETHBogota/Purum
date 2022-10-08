@@ -1,5 +1,4 @@
 import styles from '../styles/Hash.module.css'
-import 'antd/dist/antd.css';
 import React, { useState } from "react";
 import md5 from 'md5';
 
