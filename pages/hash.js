@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import md5 from 'md5';
 import copy from "copy-to-clipboard";
 import InputMask from "react-input-mask";
+import Header from "../components/Header";
 
 export default function Hash() {
     const [coorOne, setCoorOne] = useState("");
@@ -20,10 +21,10 @@ export default function Hash() {
       };
 
     return (
-        <div className={styles.main}>
-            <form className={styles.form} onSubmit={handleSubmit}>
+        <div className={styles.container}>
+            <Header />
+            <form className={styles.main} onSubmit={handleSubmit}>
             <h1 className={styles.header}>Hash Page</h1>
-            <div className={styles.main}>
                 <label>
                 <h3>Coordinate 1</h3>
                 <InputMask
@@ -57,7 +58,6 @@ export default function Hash() {
                     required
                 />
                 </label>
-            </div>
             <button className={styles.button} type="Submit">Create Hash</button>
 
             <label>

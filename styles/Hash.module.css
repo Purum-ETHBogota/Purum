@@ -4,12 +4,16 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  font-family: 'Dosis', sans-serif;
 }
-.container {
-  display: inline-flex;
+.main h3 {
+  text-align: left;
+  padding-left: 10px;
 }
+
 .header{
   font-size: 2rem;
+  font-family: 'Dosis', sans-serif;
 }
 
 .container {
@@ -25,6 +29,7 @@
   border: 1px solid #e7aee4;
   background-color: #feeefe;
   color: #000000;
+  font-family: 'Dosis', sans-serif;
 }
 
 .button {
@@ -38,6 +43,7 @@
   border: none;
   margin-top: 30px;
   font-weight: bold;
+  font-family: 'Dosis', sans-serif;
 }
 
 .button:hover {
