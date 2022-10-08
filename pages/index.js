@@ -11,7 +11,7 @@ export default function Home() {
         <h1 className={styles.title}>Purum App</h1>
 
         <p className={styles.description}>
-          Get money by capturing CO2 with your lands.
+          Earn money by capturing CO2 with your lands.
         </p>
       </main>
       {/* Here ends the App */}
