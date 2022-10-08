@@ -1,0 +1,27 @@
+.header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+  
+.menuItem {
+    margin-left: 20px;
+}
+
+.menuLogout {
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: transparent;
+}

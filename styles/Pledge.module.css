@@ -1,0 +1,12 @@
+.container {
+  padding: 0 2rem;
+}
+
+.pledgeWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    flex-direction: column;
+    text-align: center;
+}

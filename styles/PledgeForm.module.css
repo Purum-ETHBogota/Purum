@@ -1,0 +1,27 @@
+.container {
+    padding: 0 2rem;
+}
+
+.inputCoordinate {
+    margin: 10px;
+    width: 80vw;
+    height: 25px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #e7aee4;
+    background-color: #feeefe;
+}
+
+.pledgeButton {
+    width: 40vw;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #e7aee4;
+    color: #feeefe;
+    border: none;
+    margin-top: 30px;
+}
+
+.pledgeButton:active {
+    transform: scale(0.9);
+}
