@@ -5,11 +5,20 @@ export default function ConnectWallet() {
   const { isOpen, open, close } = useConnectModal();
 
   return (
-    <>
-      <h2>To continue please connect your wallet</h2>
-      <button className={styles.connectButton} onClick={open}>
-        Connect your wallet!
-      </button>
-    </>
+    <main>
+      <div className={styles.background} />
+      <div className={styles.bgBlur} />
+      <div className={styles.bgFilter} />
+
+      <div className={styles.container}>
+        <h2 className={styles.tagline}>
+          Restore your land <br /> -earn tokens
+        </h2>
+        <h1 className={styles.title}>Purum</h1>
+        <button className={styles.connectButton} onClick={open}>
+          Connect your wallet!
+        </button>
+      </div>
+    </main>
   );
 }

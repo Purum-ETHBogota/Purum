@@ -1,17 +1,9 @@
-import Head from "next/head";
 import Header from "../components/Header";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      {/* This is the Head of the App */}
-      <Head>
-        <title>Purum</title>
-        <meta name="description" content="Get money by capturing CO2 with your lands." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      {/* Here ends the Head of the App */}
 
       {/* Here starts the App  */}
       <Header />
