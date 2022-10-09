@@ -42,7 +42,7 @@ Description: Our idea uses NFT.storage to store the coordinates of a geo-referen
 Description: We use Superfluid to stream a Super Fluid native CO2 equivalent token to NFT owners at the same rate CO2 is stored by their land. 
 
 - **Worldcoin** for Best Overall, Most Creative Use Case, Honorable Mentions and Prize Pool
-
+[Link](https://github.com/Purum-ETHBogota/Purum/blob/main/pages/hash.js)
 Description: We used Worldcoin to proof users are unique humans
 
 - **Poket Network** for the Just Build Prize
