@@ -1,4 +1,4 @@
-const { network } = require('hardhat')
+const { network, ethers } = require('hardhat')
 const {
   developmentChains,
   VERIFICATION_BLOCK_CONFIRMATIONS,
@@ -21,10 +21,11 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     waitConfirmations: waitBlockConfirmations,
   })
   //   const vrfCoordinatorV2Mock = await ethers.getContract('VRFCoordinatorV2Mock')
-
-  const purumSuper = await ethers.getContract('PurumSuperToken')
-  await purumSuper.initialize('SuperPurum', 'SPR', '10000000000000000000')
+  //const purumSuper = await ethers.getContract('PurumSuperToken')
+  //const supply = ethers.utils.parseEther('10')
+  //let test = await purumSuper.dum(supply)
   // Verify the deployment
+
   if (
     !developmentChains.includes(network.name) &&
     process.env.ETHERSCAN_API_KEY
