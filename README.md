@@ -13,39 +13,39 @@ Purum enables landowners to pledge their lands for restoration initiatives. Init
 [Demo](https://purum.vercel.app/)
 
 ## How it's made?
-Purum issues geo-referenced NFTs on the @Polygon chain for ease of use, low transaction cost, and low environmental impact. 
+Purum issues geo-referenced NFTs on the @Polygon blockchain for ease of use, low transaction cost, and low environmental impact.
 
-Purum assumes the existence of a central authority that notarizes land deeds and validates land coordinates, this section of the solution uses an MD5 algorithm to encrypt the information and produce a hash that confirms ownership of land and coordinates. 
+Purum assumes the existence of a central authority that notarizes land deeds and validates land coordinates. This section of the solution uses @Worldcoin to prove the personhood of users and @thegraph for indexing and querying data from the different properties.
 
-This information is then used by the dapp to query an off-chain API called Agromonitoring and request NDVI data (Vegetation Index) and a satellite image of the land. Purum uses @Chainlink's AnyAPI to call the Agromonitoring API and get the land data. The image from Agromonitoring and the land coordinates are then stored in IPFS for decentralized storage. Purum also uses @Chainlink's Keepers to periodically call Agromoitoring and update an ecological state variable in the smart contract. 
+The dapp then uses land information to query an off-chain API called Agromonitoring and request NDVI data (Vegetation Index) and a satellite image of the land. Purum uses @Chainlink's AnyAPI to call the Agromonitoring API and get the land data. The image from Agromonitoring and the land coordinates are then stored in IPFS for decentralized storage. Purum also uses @Chainlink's Keepers to periodically call Agromoitoring and update an ecological state variable in the smart contract.
 
-Using the ecological state variable in the smart contract, Purum uses node.js to create a function that calculates the amount and rate of CO2 the land stores. Purum then uses @Superfluind to get mint a native CO2 token that gets streamed back to the NFT owner at the same rate CO2 gets stored. 
+Using the ecological state variable in the smart contract, Purum calculates the amount and rate of CO2 the land stores. Purum then uses @Superfluind to mint a native CO2 token that gets streamed back to the NFT owner at the same rate CO2 gets stored.
 
-Finally, Purum also uses Poket to access a decentralized RPC network.
+Finally, Purum uses the new @WalletConnect Modal to reduce the friction for new non-tech-savvy users and @Poket Nerwotk as RPC provider.
 
 ## Bounties we are applying for
 
 - **Polygon** for best local LATAM public goods or Refi project(s) 
 
-Link: (FALTA LINK)
+[Link:](https://github.com/Purum-ETHBogota/Purum/blob/main/hardhat-purum/contracts/PurumNFT.sol)
 
 Description: Our idea tackles a local(Latam) use case in the ReFi space. Our idea explores how land owners can turn their land into a regeneration project that stores CO2 and rewards land stewardship in real-time to make regeneration in Latam sustainable. Our idea uses Polygon for ease of use, low transaction cost and low environmental impact. 
 
 - **IPFS** for best use of NFT.storage
 
-Link: (FALTA LINK)
+[Link:](https://github.com/Purum-ETHBogota/Purum/blob/main/hardhat-purum/contracts/PurumNFT.sol)
 
 Description: Our idea uses NFT.storage to store the coordinates of a geo-referenced polygon and an image requested from a satellite imaging API.
 
 - **WalletConnect** for best projects that use WalletConnect v2.0 Track
 
-Link:(FALTA LINK)
+[Link:](https://github.com/Purum-ETHBogota/Purum/blob/main/components/ConnectWallet.js)
 
 Description: Our solution uses WalletConnect's new modal to reduce the friction for non savvy users.
 
 - **Superfluid** for best overall project, Most Innovative hack, Best NFT Hack, and Honorable Prize Pools
 
-Link: (FALTA LINK)
+[Link:](https://github.com/Purum-ETHBogota/Purum/blob/main/hardhat-purum/contracts/PurumSuperToken.sol)
 
 Description: We use Superfluid to stream a Super Fluid native CO2 equivalent token to NFT owners at the same rate CO2 is stored by their land. 
 
@@ -57,19 +57,19 @@ Description: We used Worldcoin to proof users are unique humans
 
 - **Poket Network** for the Just Build Prize
 
-Link: (FALTA LINK)
+[Link:](https://github.com/Purum-ETHBogota/Purum/blob/main/hardhat-purum/hardhat.config.js)
 
 Description: We use Pocket Network as RPC provider. 
 
 - **Lens** for best mobile UX
 
-Link: (FALTA LINK)
+[Link:](https://purum.vercel.app/)
 
 Description: We created a mobile UX but we didn't implement Lens
 
 - **Chainlink** for projects using Chainlink
 
-Link: (FALTA LINK)
+[Link:](https://github.com/Purum-ETHBogota/Purum/blob/main/hardhat-purum/contracts/PurumNFT.sol)
 
 Description: We implemented Chainlink's AnyAPI and Keepers
 
