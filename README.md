@@ -41,7 +41,7 @@ Description: Our idea uses NFT.storage to store the coordinates of a geo-referen
 
 [Link](https://github.com/Purum-ETHBogota/Purum/blob/main/components/ConnectWallet.js)
 
-Description: Our solution uses WalletConnect's new modal to reduce the friction for non savvy users.
+Description: Our solution uses WalletConnect's new modal to reduce the friction for non-tech-savvy users.
 
 - **Superfluid** for best overall project, Most Innovative hack, Best NFT Hack, and Honorable Prize Pools
 
