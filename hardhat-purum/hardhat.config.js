@@ -13,20 +13,20 @@ require('dotenv').config()
 const MAINNET_RPC_URL =
   process.env.MAINNET_RPC_URL ||
   process.env.ALCHEMY_MAINNET_RPC_URL ||
-  'https://eth-mainnet.alchemyapi.io/v2/your-api-key'
+  'https://eth-mainnet.gateway.pokt.network/v1/lb/a08400be98c99d60764fbb63'
 const RINKEBY_RPC_URL =
   process.env.RINKEBY_RPC_URL ||
-  'https://eth-rinkeby.alchemyapi.io/v2/your-api-key'
+  'https://eth-rinkeby.gateway.pokt.network/v1/lb/a08400be98c99d60764fbb63'
 const KOVAN_RPC_URL =
-  process.env.KOVAN_RPC_URL || 'https://eth-kovan.alchemyapi.io/v2/your-api-key'
+  process.env.KOVAN_RPC_URL || 'https://poa-kovan.gateway.pokt.network/v1/lb/a08400be98c99d60764fbb63'
 const POLYGON_MAINNET_RPC_URL =
   process.env.POLYGON_MAINNET_RPC_URL ||
-  'https://polygon-mainnet.alchemyapi.io/v2/your-api-key'
+  'https://poly-mainnet.gateway.pokt.network/v1/lb/a08400be98c99d60764fbb63'
 const PRIVATE_KEY = process.env.PRIVATE_KEY || '0x'
 
 const POLYGON_MUMBAI_RPC_URL =
   process.env.POLYGON_MUMBAI_RPC_URL ||
-  'https://polygon-mainnet.alchemyapi.io/v2/your-api-key'
+  'https://polygon-mumbai.gateway.pokt.network/v1/lb/a08400be98c99d60764fbb63'
 
 // optional
 const MNEMONIC = process.env.MNEMONIC || 'your mnemonic'

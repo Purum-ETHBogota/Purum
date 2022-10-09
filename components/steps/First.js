@@ -1,10 +1,8 @@
 import Image from "next/image";
-import { useAccount, useDisconnect } from "@web3modal/react";
 import styles from "../../styles/PledgeForm.module.css";
 
 export default function First({ handleNextStep }) {
-  const { address } = useAccount();
-  const disconnect = useDisconnect();
+  const address = window && window.ethereum && window.ethereum.selectedAddress;
 
   const randomizer = Math.trunc(Math.random() * 10);
 

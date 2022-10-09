@@ -3,15 +3,26 @@ import Image from "next/image";
 import styles from "../../styles/PledgeForm.module.css";
 import { ethers } from "ethers";
 
+// Usage
 export default function Third({ handleNextStep }) {
   const [hash, setHash] = useState("");
+  
+  const web3 = new ethers.providers.JsonRpcProvider(process.env.API_URL_RPC, 80001);
+  const signer = web3.getSigner();
+  
+  // // console.log('signer ', signer);
+  const abi = [{"type":"event","anonymous":false,"name":"NFTCreated","inputs":[{"type":"address","name":"NFTAddress","indexed":true}]},{"type":"function","name":"createNFT","constant":false,"payable":false,"inputs":[],"outputs":[]},{"type":"function","name":"getLinkFromNFTS","constant":false,"payable":false,"inputs":[{"type":"uint256","name":"_index"}],"outputs":[]},{"type":"function","name":"getTotalNFTS","constant":true,"stateMutability":"view","payable":false,"inputs":[],"outputs":[{"type":"uint256","name":"count"}]},{"type":"function","name":"nftsArray","constant":true,"stateMutability":"view","payable":false,"inputs":[{"type":"uint256"}],"outputs":[{"type":"address"}]}];
+  
+  
+  const CreateNFTContract = new ethers.Contract(process.env.CREATE_NFT_CONTRACT, abi, signer)
+  
   const handleChange = (e) => {
     setHash(e.target.value);
   };
-
-  const handleGenerateNFT = () => {
-
-    //console.log("I generated it!");
+  
+  const handleGenerateNFT = async () => {
+    let tx = await CreateNFTContract.createNFT();
+    return tx;
   };
 
   const handleBack = () => {

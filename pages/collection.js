@@ -40,6 +40,7 @@ export default function Second({ handleNextStep }) {
               src="/assets/imageNFTSample.jpeg"
               width={243}
               height={231}
+              alt="image sample"
             />
             <div className={styles.data}>
               <span className={styles.attribute}>Total area:</span>
