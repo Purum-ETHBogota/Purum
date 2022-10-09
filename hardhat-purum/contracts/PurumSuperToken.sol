@@ -1,33 +1,26 @@
 // SPDX-License-Identifier: AGPLv3
-pragma solidity 0.8.16;
+pragma solidity ^0.8.0;
 
-import {ISuperToken, CustomSuperTokenBase} from "@superfluid-finance/ethereum-contracts/contracts/interfaces/superfluid/CustomSuperTokenBase.sol";
-import {IPureSuperTokenCustom} from "@superfluid-finance/ethereum-contracts/contracts/interfaces/tokens/IPureSuperToken.sol";
-//import {UUPSProxy} from "../upgradability/UUPSProxy.sol";
-import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import {SuperTokenBase} from "./superfluid/SuperTokenBase.sol";
 
-/**
- * @title Native SuperToken custom super token implementation
- * @author Superfluid
- * @dev This is a simple implementation where the supply is pre-minted.
- */
-contract PurumSuperToken is IPureSuperTokenCustom, CustomSuperTokenBase {
+/// @title Minimal Pure Super Token
+/// @author jtriley.eth
+/// @notice Pre-minted supply. This is includes no custom logic. Used in `PureSuperTokenDeployer`
+contract PurumSuperToken is SuperTokenBase {
+    /// @dev Upgrades the super token with the factory, then initializes.
+    /// @param factory super token factory for initialization
+    /// @param name super token name
+    /// @param symbol super token symbol
+    /// @param receiver Receiver of pre-mint
+    /// @param initialSupply Initial token supply to pre-mint
     function initialize(
-        string calldata name,
-        string calldata symbol,
+        address factory,
+        string memory name,
+        string memory symbol,
+        address receiver,
         uint256 initialSupply
-    ) external override {
-        ISuperToken(address(this)).initialize(
-            // NOTE this is the verbose intention
-            IERC20(0x0000000000000000000000000000000000000000), // no underlying/wrapped token
-            18, // shouldn't matter if there's no wrapped token
-            name,
-            symbol
-        );
-        ISuperToken(address(this)).selfMint(
-            msg.sender,
-            initialSupply,
-            new bytes(0)
-        );
+    ) external {
+        _initialize(factory, name, symbol);
+        _mint(receiver, initialSupply, "");
     }
 }
