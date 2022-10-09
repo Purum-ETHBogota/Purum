@@ -4,7 +4,7 @@ import "../styles/globals.css";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: "https://api.thegraph.com/subgraphs/name/sebas-9009/purum",
+  uri: "https://api.thegraph.com/subgraphs/name/sebas-9009/bogotha_purum_registration",
   cache: new InMemoryCache()
 });
 

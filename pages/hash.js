@@ -7,45 +7,43 @@ import InputMask from "react-input-mask";
 import Header from "../components/Header";
 import NoSSR from 'react-no-ssr';
 import { CheckSubgraph } from '../components/hooks/CheckSubgraph';
-import { id } from "ethers/lib/utils";
 
 export default function Hash() {
-  const [coorOne, setCoorOne] = useState("");
-  const [coorTwo, setCoorTwo] = useState("");
-  const [coorThree, setCoorThree] = useState("");
-  const [hKey, setHKey] = useState("");
-  const {data, loading, error} = CheckSubgraph("0x15626828302653e3ae0e14cd812adde078363fbb");
+    const [coorOne, setCoorOne] = useState("");
+    const [coorTwo, setCoorTwo] = useState("");
+    const [coorThree, setCoorThree] = useState("");
+    const [hKey, setHKey] = useState("");
+    const [nulliHash, setNulliHash] = useState("");
+    
+    //first parameter is the nullihash and the second parameter is the hashKey. Created CheckSubgraph.js hook to make graphql query
+    const {data, loading, error} = CheckSubgraph("0x0339861e70a9bdb6b01a88c7534a3332db915d3d06511b79a5724221a6958fbe", "0xa17b98909f3345285327e1d545063fdf09bb0adf7c773fc9cd8765dd66d1a847");
 
-  if(!loading){
-    if(data?.exampleEntities.length){
-        console.log("Entro");
-    }else{
-        console.log("No entro");
+    if(!loading){
+        if(data?.exampleEntities.length){
+            //call Registration.sol contract
+            console.log("Request successfully");
+        }else{
+            //coordinates belong to someone else
+            console.log("Failed connection to Sub graph");
+        }
+      }
+
+    const handleChange = (setter, e) => {
+        setter(e.target.value);
     }
-  }
-//   if(data?.exampleEntities.length)
-//   {
-//     console.log("Entro");
-//   }else{
-//     console.log("No entro")
-//   }
-//   if(!data.id){
-//     console.log("No Data Found!");
-//   }else{
-//     console.log("Data Found!");
-//   }
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const secretKey = "PurumBogota";
-    const hashKey = md5(coorOne + coorTwo + coorThree + secretKey);
-    setHKey(hashKey);
-    alert(
-      "Your Hash key has been copied to your clipboard! \nThis is your hash key: " +
-        hashKey
-    );
-    copy(hashKey);
-  };
+    
+    const handleSubmit = (event) => {
+        const secretKey = md5("PurumBogota");
+        const hashKey = "0x" + md5(coorOne + coorTwo + coorThree) + secretKey;
+        setHKey(hashKey);
+        event.preventDefault();
+        alert(
+            "Your Hash key has been copied to your clipboard! \nThis is your hash key: " +
+            hashKey
+            );
+            copy(hashKey);
+                        
+    };
 
   return (
     <div className={styles.container}>
@@ -58,7 +56,7 @@ export default function Hash() {
             className={styles.inputCoordinate}
             mask="999.9999, 999.9999"
             value={coorOne}
-            onChange={(event) => setCoorOne(event.target.value)}
+            onChange={(e) => handleChange(setCoorOne, e)}
             placeholder="Lat: 123.1234, Long: 123.1234"
             required
           />
@@ -69,7 +67,7 @@ export default function Hash() {
             className={styles.inputCoordinate}
             mask="999.9999, 999.9999"
             value={coorTwo}
-            onChange={(event) => setCoorTwo(event.target.value)}
+            onChange={(e) => handleChange(setCoorTwo, e)}
             placeholder="Lat: 123.1234, Long: 123.1234"
             required
           />
@@ -80,19 +78,19 @@ export default function Hash() {
             className={styles.inputCoordinate}
             mask="999.9999, 999.9999"
             value={coorThree}
-            onChange={(event) => setCoorThree(event.target.value)}
+            onChange={(e) => handleChange(setCoorThree, e)}
             placeholder="Lat: 123.1234, Long: 123.1234"
             required
           />
         </label>
-        {/* <button className={styles.button} type="Submit">Create Hash</button> */}
+        <button className={styles.button} type="Submit">Create Hash</button>
         <NoSSR>
           <WorldIDWidget
             actionId="0xABB70f7F39035586Da57B3c8136035f87AC0d2Aa"
             signal="my_signal"
             enableTelemetry
             onSuccess={(verificationResponse) =>
-              console.log(verificationResponse)
+              setNulliHash(verificationResponse.nullifier_hash)
             } // you'll actually want to pass the proof to the API or your smart contract
             onError={(error) => console.error(error)}
           />
