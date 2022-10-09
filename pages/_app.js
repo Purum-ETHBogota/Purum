@@ -1,6 +1,12 @@
 import Head from "next/head";
 import { Web3Modal } from "@web3modal/react";
 import "../styles/globals.css";
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+
+const client = new ApolloClient({
+  uri: "https://api.thegraph.com/subgraphs/name/sebas-9009/purum",
+  cache: new InMemoryCache()
+});
 
 const config = {
   projectId: process.env.WALLET_CONNECT_ID,
@@ -14,6 +20,7 @@ const config = {
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <ApolloProvider client={client}>
       <Head>
         <title>Purum</title>
         <meta
@@ -24,6 +31,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Component {...pageProps} />
       <Web3Modal config={config} />
+      </ApolloProvider>
     </>
   );
 }

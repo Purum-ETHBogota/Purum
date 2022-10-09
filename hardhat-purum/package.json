@@ -23,6 +23,7 @@
   "dependencies": {
     "@chainlink/contracts": "^0.5.1",
     "@openzeppelin/contracts": "^4.7.3",
-    "@superfluid-finance/ethereum-contracts": "^1.4.1"
+    "@superfluid-finance/ethereum-contracts": "^1.4.1",
+    "@superfluid-finance/sdk-core": "^0.5.6"
   }
 }

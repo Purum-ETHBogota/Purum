@@ -6,12 +6,34 @@ import copy from "copy-to-clipboard";
 import InputMask from "react-input-mask";
 import Header from "../components/Header";
 import NoSSR from 'react-no-ssr';
+import { CheckSubgraph } from '../components/hooks/CheckSubgraph';
+import { id } from "ethers/lib/utils";
 
 export default function Hash() {
   const [coorOne, setCoorOne] = useState("");
   const [coorTwo, setCoorTwo] = useState("");
   const [coorThree, setCoorThree] = useState("");
   const [hKey, setHKey] = useState("");
+  const {data, loading, error} = CheckSubgraph("0x15626828302653e3ae0e14cd812adde078363fbb");
+
+  if(!loading){
+    if(data?.exampleEntities.length){
+        console.log("Entro");
+    }else{
+        console.log("No entro");
+    }
+  }
+//   if(data?.exampleEntities.length)
+//   {
+//     console.log("Entro");
+//   }else{
+//     console.log("No entro")
+//   }
+//   if(!data.id){
+//     console.log("No Data Found!");
+//   }else{
+//     console.log("Data Found!");
+//   }
 
   const handleSubmit = (event) => {
     event.preventDefault();

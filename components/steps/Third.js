@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import styles from "../../styles/PledgeForm.module.css";
+import { ethers } from "ethers";
 
 export default function Third({ handleNextStep }) {
   const [hash, setHash] = useState("");
@@ -9,7 +10,8 @@ export default function Third({ handleNextStep }) {
   };
 
   const handleGenerateNFT = () => {
-    console.log("I generated it!");
+
+    //console.log("I generated it!");
   };
 
   const handleBack = () => {
