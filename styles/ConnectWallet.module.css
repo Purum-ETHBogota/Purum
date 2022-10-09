@@ -1,6 +1,47 @@
+.background {
+    background-image: url('../public/assets/connectBackground.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    height: 100vh;
+    width: 100vw;
+}
+
 .connectButton {
-    width: 150px;
-    height: 30px;
+    width: 300px;
+    height: 70px;
+    border: none;
     border-radius: 50px;
-    background-color: #e7aee4;
+    background-color: white;
+    color: #6a515e;
+    margin: 0 auto 30px;
+    font-size: 21px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.connectButton:active {
+    background-color: #6a515e;
+    color: white;
+}
+
+.tagline {
+    font-family: 'Merriweather', serif;
+    color: #6a515e;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 150%;
+    text-align: left;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 90vw;
+    justify-content: space-between;
 }

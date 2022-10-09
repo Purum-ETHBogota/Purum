@@ -2,26 +2,108 @@
     padding: 0 2rem;
 }
 
-.inputCoordinate {
-    margin: 10px;
-    width: 80vw;
-    height: 25px;
-    border-radius: 10px;
-    padding: 10px;
-    border: 1px solid #e7aee4;
-    background-color: #feeefe;
+.backButton {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 90vh;
+}
+
+.avatar {
+    height: 82px;
+    width: 82px;
+    border-radius: 50%;
+    background: #FBEAEB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.address {
+    color: #C7ABBA;
+    font-size: 24px;
+    font-family: 'Dosis', sans-serif;
 }
 
 .pledgeButton {
-    width: 40vw;
-    height: 40px;
-    border-radius: 40px;
-    background-color: #e7aee4;
-    color: #feeefe;
+    width: 300px;
+    height: 70px;
+    background: linear-gradient(238.59deg, #5FD3FF -18.96%, rgba(99, 214, 255, 0) 54.42%),
+    linear-gradient(96.53deg, #FFAE88 -3.19%, #8F93EA 105.27%);
+    color: white;
+    border-radius: 100px;
     border: none;
-    margin-top: 30px;
+    margin: 0 auto;
+    font-family: 'Dosis', sans-serif;
+    font-size: 21px;
+}
+
+.inputCoordinate {
+    font-family: 'Dosis', sans-serif;
+    width: 300px;
+    background-color: white;
+    color: #6a515e;
+    height: 70px;
+    border-radius: 100px;
+    border: none;
+    box-shadow: 0px 10px 80px #FBEAEB;
+    font-size: 18px;
+    padding: 20px;
+}
+
+.inputWrapper {
+    margin-bottom: 20px;
+}
+
+.label {
+    font-family: 'Dosis', sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 150%;
+    color: #C7ABBA;
+    text-align: left;
+    width: 100%;
+    display: block;
+    margin: 0 10px;
 }
 
 .pledgeButton:active {
-    transform: scale(0.9);
+    transform: scale(0.99);
+}
+
+.moreCoordinates {
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+    width: 66px;
+    height: 66px;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0px 10px 80px #FBEAEB;
+    color: #6A515E;
+}
+
+.title {
+    font-family: 'Merriweather', serif;
+    color: #6a515e;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 150%;
+    text-align: left;
+    margin: 0 10px 20px;
 }
