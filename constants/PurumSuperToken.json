@@ -1,0 +1,1 @@
+[{"type":"function","name":"initialize","constant":false,"payable":false,"gas":29000000,"inputs":[{"type":"string","name":"name"},{"type":"string","name":"symbol"},{"type":"uint256","name":"initialSupply"}],"outputs":[]}]
