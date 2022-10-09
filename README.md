@@ -25,19 +25,19 @@ Using the ecological state variable in the smart contract, Purum calculates the 
 
 - **Polygon** for best local LATAM public goods or Refi project(s) 
 
-[Link](https://github.com/Purum-ETHBogota/Purum/blob/main/hardhat-purum/contracts/PurumNFT.sol)
+[Link](https://mumbai.polygonscan.com/address/0xa458E6C66543c6CE3b9275BB91F9cDA0240E72d9#code)
 
 Description: Our idea tackles a local(Latam) use case in the ReFi space. Our idea explores how land owners can turn their land into a regeneration project that stores CO2 and rewards land stewardship in real-time to make regeneration in Latam sustainable. Our idea uses Polygon for ease of use, low transaction cost and low environmental impact. 
 
 - **IPFS** for best use of NFT.storage
 
-[Link](https://github.com/Purum-ETHBogota/Purum/blob/main/hardhat-purum/contracts/PurumNFT.sol)
+[Link](https://mumbai.polygonscan.com/address/0x63857646cAfE813d2D6e48848231Aa3cbbAD8258#code)
 
 Description: Our idea uses NFT.storage to store the coordinates of a geo-referenced polygon and an image requested from a satellite imaging API.
 
 - **Superfluid** for best overall project, Most Innovative hack, Best NFT Hack, and Honorable Prize Pools
 
-[Link](https://github.com/Purum-ETHBogota/Purum/blob/main/hardhat-purum/contracts/PurumSuperToken.sol)
+[Link](https://mumbai.polygonscan.com/address/0x27DD46923B826153f1D0fd54B99cFC8211Df6E02#code)
 
 Description: We use Superfluid to stream a Super Fluid native CO2 equivalent token to NFT owners at the same rate CO2 is stored by their land. 
 
