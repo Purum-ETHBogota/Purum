@@ -1,10 +1,16 @@
-![Purum Logo](https://ibb.co/j6VRKJR)
+![Purum Logo](https://postimg.cc/n9cKSMVv)
 
 # Purum 
 Purum is a community of land stewards farming gourmet CO2 tokens. 
 
 ## Description 
 Purum enables landowners to pledge their lands for restoration initiatives. Initiatives are represented by dynamic geo-referenced NFTs that update their ecological state weekly. Additionally, Purum estimates how much CO2 will be stored by the land and issues a native SuperFluid token that then gets streamed to the NFT owner at the same rate CO2 is stored.
+
+![Purum Screens](https://ibb.co/j6VRKJR)
+
+## Take it for a spin
+
+[Demo](https://purum.vercel.app/)
 
 ## How it's made?
 Purum issues geo-referenced NFTs on the @Polygon chain for ease of use, low transaction cost, and low environmental impact. 
