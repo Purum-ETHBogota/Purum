@@ -21,8 +21,6 @@ export default function Header() {
     return windowWidth;
   };
 
-  console.log("useWindowDimensiosn ", useWindowWidth());
-
   if (useWindowWidth() > 700) {
     return (
       <header>
