@@ -1,3 +1,5 @@
+![Purum Logo](https://ibb.co/j6VRKJR)
+
 # Purum 
 Purum is a community of land stewards farming gourmet CO2 tokens. 
 
@@ -60,16 +62,15 @@ Link: (FALTA LINK)
 Description: We implemented Chainlink's AnyAPI and Keepers
 
 ## Team
-Luis Mendez
-Sebastian Meneses 
-Wilman Vinieza
-Daniel Olarte
+- Luis Mendez
+
+- Sebastian Meneses 
+
+- Wilman Vinieza
+
+- Daniel Olarte
 
 
-
-
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
