@@ -1,5 +1,14 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+#hardhat
+/hardhat-purum/node_modules
+/hardhat-purum/.env
+/hardhat-purum/yarn.lock
+/hardhat-purum/artifacts
+/hardhat-purum/.env
+/hardhat-purum/cache
+
+
 # dependencies
 /node_modules
 /hardhat-purum/node_modules
