@@ -21,38 +21,28 @@ The dapp then uses land information to query an off-chain API called Agromonitor
 
 Using the ecological state variable in the smart contract, Purum calculates the amount and rate of CO2 the land stores. Purum then uses @Superfluind to mint a native CO2 token that gets streamed back to the NFT owner at the same rate CO2 gets stored.
 
-Finally, Purum uses the new @WalletConnect Modal to reduce the friction for new non-tech-savvy users and @Poket Nerwotk as RPC provider.
-
 ## Bounties we are applying for
 
 - **Polygon** for best local LATAM public goods or Refi project(s) 
 
-[Link](https://github.com/Purum-ETHBogota/Purum/blob/main/hardhat-purum/contracts/PurumNFT.sol)
+[Link](https://mumbai.polygonscan.com/address/0xa458E6C66543c6CE3b9275BB91F9cDA0240E72d9#code)
 
 Description: Our idea tackles a local(Latam) use case in the ReFi space. Our idea explores how land owners can turn their land into a regeneration project that stores CO2 and rewards land stewardship in real-time to make regeneration in Latam sustainable. Our idea uses Polygon for ease of use, low transaction cost and low environmental impact. 
 
 - **IPFS** for best use of NFT.storage
 
-[Link](https://github.com/Purum-ETHBogota/Purum/blob/main/hardhat-purum/contracts/PurumNFT.sol)
+[Link](https://mumbai.polygonscan.com/address/0x63857646cAfE813d2D6e48848231Aa3cbbAD8258#code)
 
 Description: Our idea uses NFT.storage to store the coordinates of a geo-referenced polygon and an image requested from a satellite imaging API.
 
-- **WalletConnect** for best projects that use WalletConnect v2.0 Track
-
-[Link](https://github.com/Purum-ETHBogota/Purum/blob/main/components/ConnectWallet.js)
-
-Description: Our solution uses WalletConnect's new modal to reduce the friction for non-tech-savvy users.
-
 - **Superfluid** for best overall project, Most Innovative hack, Best NFT Hack, and Honorable Prize Pools
 
-[Link](https://github.com/Purum-ETHBogota/Purum/blob/main/hardhat-purum/contracts/PurumSuperToken.sol)
+[Link](https://mumbai.polygonscan.com/address/0x27DD46923B826153f1D0fd54B99cFC8211Df6E02#code)
 
 Description: We use Superfluid to stream a Super Fluid native CO2 equivalent token to NFT owners at the same rate CO2 is stored by their land. 
 
 - **Worldcoin** for Best Overall, Most Creative Use Case, Honorable Mentions and Prize Pool
-
-Link:(FALTA LINK)
-
+[Link](https://github.com/Purum-ETHBogota/Purum/blob/main/pages/hash.js)
 Description: We used Worldcoin to proof users are unique humans
 
 - **Poket Network** for the Just Build Prize
@@ -75,7 +65,7 @@ Description: We implemented Chainlink's AnyAPI and Keepers
 
 - **The Graph**  for Best new subgraph on The Graph Explorer
 
-Link: (FALTA LINK)
+[Link](https://thegraph.com/hosted-service/subgraph/sebas-9009/bogotha_purum_registration)
 
 Description: We created a new subgraph in the graph explorer
 
