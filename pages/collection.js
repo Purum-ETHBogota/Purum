@@ -1,8 +1,12 @@
+import { useState } from 'react';
+import { Framework } from '@superfluid-finance/sdk-core'
+import { ethers } from 'ethers'
 import { useAccount } from "@web3modal/react";
 import Image from "next/image";
 import styles from "../styles/Collection.module.css";
 
-export default function Second({ handleNextStep }) {
+export default function Collection() {
+  const [flowDeposit, setFlowDeposit] = useState(0)
   const randomizer = Math.trunc(Math.random() * 10);
   const { address } = useAccount();
 
@@ -15,6 +19,29 @@ export default function Second({ handleNextStep }) {
   const handleRedeemTokens = () => {
     console.log('reedemed tokens');
   }
+
+  const provider = new ethers.providers.AlchemyProvider(
+    'maticmum',
+    'iELrSLdjVmjGrLjepAHOJFXV8Lyeu_Mb'
+  )
+
+  const checkFluid = async () => { 
+    const sf = await Framework.create({
+      chainId: 80001,
+      provider,
+    })
+    
+    // Read example
+    const flowInfo = await sf.cfaV1.getFlow({
+      superToken: '0x27DD46923B826153f1D0fd54B99cFC8211Df6E02',
+      sender: '0x8B3cd113C919272969b211a935c5d2B6410dB235',
+      receiver: '0x4b2b0D5eE2857fF41B40e3820cDfAc8A9cA60d9f',
+      providerOrSigner: provider,
+    })
+    
+    setFlowDeposit(flowInfo.deposit)
+  }
+  checkFluid();
 
   const truncatedAddress = `${address.slice(0, 5)}…${address.slice(-3)}`;
 
@@ -66,7 +93,7 @@ export default function Second({ handleNextStep }) {
             disabled={currentFunds ? false : true}
             className={styles.pledgeButton}
           >
-            <span>Redeem<br />{`$12.00`}</span>
+            <span>Redeem<br />{`$${flowDeposit/100}`}</span>
           </button>
         </div>
       </div>

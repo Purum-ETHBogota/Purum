@@ -1,28 +1,91 @@
+
+import { Framework } from '@superfluid-finance/sdk-core'
+import { WorldIDWidget } from "@worldcoin/id";
 import { useState } from "react";
 import Image from "next/image";
 import styles from "../../styles/PledgeForm.module.css";
 import { ethers } from "ethers";
+import Link from 'next/link';
 
 // Usage
 export default function Third({ handleNextStep }) {
   const [hash, setHash] = useState("");
+  const [done, setDone] = useState(false);
   
   const web3 = new ethers.providers.JsonRpcProvider(process.env.API_URL_RPC, 80001);
   const signer = web3.getSigner();
-  
-  // // console.log('signer ', signer);
+
   const abi = [{"type":"event","anonymous":false,"name":"NFTCreated","inputs":[{"type":"address","name":"NFTAddress","indexed":true}]},{"type":"function","name":"createNFT","constant":false,"payable":false,"inputs":[],"outputs":[]},{"type":"function","name":"getLinkFromNFTS","constant":false,"payable":false,"inputs":[{"type":"uint256","name":"_index"}],"outputs":[]},{"type":"function","name":"getTotalNFTS","constant":true,"stateMutability":"view","payable":false,"inputs":[],"outputs":[{"type":"uint256","name":"count"}]},{"type":"function","name":"nftsArray","constant":true,"stateMutability":"view","payable":false,"inputs":[{"type":"uint256"}],"outputs":[{"type":"address"}]}];
   
   
   const CreateNFTContract = new ethers.Contract(process.env.CREATE_NFT_CONTRACT, abi, signer)
+
+  async function createNFT() {
+    if (typeof window.ethereum !== 'undefined') {
+      //We are going to need:
+      //provider/ connection to the blockchain
+      //signer / wallet / someone with gas
+      // contract we are interacting with
+      // ABI & Address
   
-  const handleChange = (e) => {
-    setHash(e.target.value);
-  };
+      const provider = new ethers.providers.Web3Provider(window.ethereum)
+  
+      const signer = provider.getSigner()
+      console.log(signer)
+      const contract = new ethers.Contract(process.env.CREATE_NFT_CONTRACT, abi, signer)
+  
+      const startStream = async () => {
+        const provider = new ethers.providers.AlchemyProvider(
+          'maticmum',
+          'iELrSLdjVmjGrLjepAHOJFXV8Lyeu_Mb'
+        )
+        
+        const sf = await Framework.create({
+          chainId: 80001,
+          provider,
+        })
+        
+        // Write operation example
+        const signer = sf.createSigner({
+          privateKey: process.env.STREAM_PRIVATE_KEY,
+          provider,
+        })
+
+        const createFlowOperation = sf.cfaV1.createFlow({
+          sender: '0x8B3cd113C919272969b211a935c5d2B6410dB235',
+          receiver: '0x4b2b0D5eE2857fF41B40e3820cDfAc8A9cA60d9f',
+          superToken: '0x27DD46923B826153f1D0fd54B99cFC8211Df6E02',
+          flowRate: '10000000000',
+        })
+        const txnResponse = await createFlowOperation.exec(signer)
+        const txnReceipt = await txnResponse.wait()
+        // Transaction Complete when code reaches here
+        setDone(true);
+      }
+
+      const listenForTransactionMine = (transactionResponse, provider) => {
+        console.log(`Mining ${transactionResponse.hash}...`);
+        return new Promise((resolve, reject) => {
+          provider.once(transactionResponse.hash, (transactionReceipt) => {
+            // startStream();
+            setDone(true);
+            resolve();
+          });
+        });
+      };
+
+      try {
+        const txResponse = await contract.createNFT()
+        await listenForTransactionMine(txResponse, provider)
+        await console.log('Done!')
+      } catch (error) {
+        console.log(error)
+      }
+    }
+  }
   
   const handleGenerateNFT = async () => {
-    let tx = await CreateNFTContract.createNFT();
-    return tx;
+    await createNFT()
   };
 
   const handleBack = () => {
@@ -48,17 +111,21 @@ export default function Third({ handleNextStep }) {
             height={50}
           />
         </div>
-        <h2 className={styles.title}>Add your key</h2>
+        <h2 className={styles.title}>{"Let's verify you"}</h2>
         <div className={styles.inputWrapper}>
-          <label className={styles.label}>Key hash</label>
-          <input
-            className={styles.inputCoordinate}
-            value={hash}
-            onChange={handleChange}
-            placeholder="0x87A...84A9"
+          <label className={styles.label}>Prove your everything!</label>
+          <WorldIDWidget
+            actionId="0xABB70f7F39035586Da57B3c8136035f87AC0d2Aa"
+            signal="my_signal"
+            enableTelemetry
+            onSuccess={(verificationResponse) =>
+              setHash(verificationResponse.nullifier_hash)
+            } // you'll actually want to pass the proof to the API or your smart contract
+            onError={(error) => console.error(error)}
           />
         </div>
       </div>
+      {!done ? (
       <button
         onClick={handleGenerateNFT}
         disabled={hash ? false : true}
@@ -78,6 +145,13 @@ export default function Third({ handleNextStep }) {
           />
         </svg>
       </button>
+      ) : (
+        <Link href='/collection'>
+          <button  className={styles.pledgeButton}>
+            Ver mi nuevo NFT
+          </button>
+        </Link>
+      )}
     </div>
   );
 }
