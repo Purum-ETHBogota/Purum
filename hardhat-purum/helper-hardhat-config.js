@@ -19,6 +19,10 @@ const networkConfig = {
     name: 'mainnet',
     keepersUpdateInterval: '30',
   },
+  80001: {
+    name: 'mumbai',
+    keepersUpdateInterval: '30',
+  },
 }
 
 const developmentChains = ['hardhat', 'localhost']
