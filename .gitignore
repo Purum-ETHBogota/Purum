@@ -7,6 +7,7 @@
 /hardhat-purum/artifacts
 /hardhat-purum/.env
 /hardhat-purum/cache
+/hardhat-purum/deployments
 
 
 # dependencies
