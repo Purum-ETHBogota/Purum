@@ -21,8 +21,6 @@ The dapp then uses land information to query an off-chain API called Agromonitor
 
 Using the ecological state variable in the smart contract, Purum calculates the amount and rate of CO2 the land stores. Purum then uses @Superfluind to mint a native CO2 token that gets streamed back to the NFT owner at the same rate CO2 gets stored.
 
-Finally, Purum uses the new @WalletConnect Modal to reduce the friction for new non-tech-savvy users and @Poket Nerwotk as RPC provider.
-
 ## Bounties we are applying for
 
 - **Polygon** for best local LATAM public goods or Refi project(s) 
@@ -37,12 +35,6 @@ Description: Our idea tackles a local(Latam) use case in the ReFi space. Our ide
 
 Description: Our idea uses NFT.storage to store the coordinates of a geo-referenced polygon and an image requested from a satellite imaging API.
 
-- **WalletConnect** for best projects that use WalletConnect v2.0 Track
-
-[Link](https://github.com/Purum-ETHBogota/Purum/blob/main/components/ConnectWallet.js)
-
-Description: Our solution uses WalletConnect's new modal to reduce the friction for non-tech-savvy users.
-
 - **Superfluid** for best overall project, Most Innovative hack, Best NFT Hack, and Honorable Prize Pools
 
 [Link](https://github.com/Purum-ETHBogota/Purum/blob/main/hardhat-purum/contracts/PurumSuperToken.sol)
@@ -50,8 +42,6 @@ Description: Our solution uses WalletConnect's new modal to reduce the friction 
 Description: We use Superfluid to stream a Super Fluid native CO2 equivalent token to NFT owners at the same rate CO2 is stored by their land. 
 
 - **Worldcoin** for Best Overall, Most Creative Use Case, Honorable Mentions and Prize Pool
-
-Link:(FALTA LINK)
 
 Description: We used Worldcoin to proof users are unique humans
 
@@ -75,7 +65,7 @@ Description: We implemented Chainlink's AnyAPI and Keepers
 
 - **The Graph**  for Best new subgraph on The Graph Explorer
 
-Link: (FALTA LINK)
+[Link](https://thegraph.com/hosted-service/subgraph/sebas-9009/bogotha_purum_registration)
 
 Description: We created a new subgraph in the graph explorer
 
