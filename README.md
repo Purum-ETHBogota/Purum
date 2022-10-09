@@ -27,25 +27,25 @@ Finally, Purum uses the new @WalletConnect Modal to reduce the friction for new 
 
 - **Polygon** for best local LATAM public goods or Refi project(s) 
 
-Link: (FALTA LINK)
+[Link:](https://github.com/Purum-ETHBogota/Purum/blob/main/hardhat-purum/contracts/PurumNFT.sol)
 
 Description: Our idea tackles a local(Latam) use case in the ReFi space. Our idea explores how land owners can turn their land into a regeneration project that stores CO2 and rewards land stewardship in real-time to make regeneration in Latam sustainable. Our idea uses Polygon for ease of use, low transaction cost and low environmental impact. 
 
 - **IPFS** for best use of NFT.storage
 
-Link: (FALTA LINK)
+[Link:](https://github.com/Purum-ETHBogota/Purum/blob/main/hardhat-purum/contracts/PurumNFT.sol)
 
 Description: Our idea uses NFT.storage to store the coordinates of a geo-referenced polygon and an image requested from a satellite imaging API.
 
 - **WalletConnect** for best projects that use WalletConnect v2.0 Track
 
-Link:(FALTA LINK)
+[Link:](https://github.com/Purum-ETHBogota/Purum/blob/main/components/ConnectWallet.js)
 
 Description: Our solution uses WalletConnect's new modal to reduce the friction for non savvy users.
 
 - **Superfluid** for best overall project, Most Innovative hack, Best NFT Hack, and Honorable Prize Pools
 
-Link: (FALTA LINK)
+[Link:](https://github.com/Purum-ETHBogota/Purum/blob/main/hardhat-purum/contracts/PurumSuperToken.sol)
 
 Description: We use Superfluid to stream a Super Fluid native CO2 equivalent token to NFT owners at the same rate CO2 is stored by their land. 
 
@@ -57,19 +57,19 @@ Description: We used Worldcoin to proof users are unique humans
 
 - **Poket Network** for the Just Build Prize
 
-Link: (FALTA LINK)
+[Link:](https://github.com/Purum-ETHBogota/Purum/blob/main/hardhat-purum/hardhat.config.js)
 
 Description: We use Pocket Network as RPC provider. 
 
 - **Lens** for best mobile UX
 
-Link: (FALTA LINK)
+[Link:](https://purum.vercel.app/)
 
 Description: We created a mobile UX but we didn't implement Lens
 
 - **Chainlink** for projects using Chainlink
 
-Link: (FALTA LINK)
+[Link:](https://github.com/Purum-ETHBogota/Purum/blob/main/hardhat-purum/contracts/PurumNFT.sol)
 
 Description: We implemented Chainlink's AnyAPI and Keepers
 
