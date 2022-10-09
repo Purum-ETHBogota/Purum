@@ -49,6 +49,12 @@ Link: (FALTA LINK)
 
 Description: We use Superfluid to stream a Super Fluid native CO2 equivalent token to NFT owners at the same rate CO2 is stored by their land. 
 
+- **Worldcoin** for Best Overall, Most Creative Use Case, Honorable Mentions and Prize Pool
+
+Link:(FALTA LINK)
+
+Description: We used Worldcoin to proof users are unique humans
+
 - **Poket Network** for the Just Build Prize
 
 Link: (FALTA LINK)
@@ -66,6 +72,13 @@ Description: We created a mobile UX but we didn't implement Lens
 Link: (FALTA LINK)
 
 Description: We implemented Chainlink's AnyAPI and Keepers
+
+- **The Graph**  for Best new subgraph on The Graph Explorer
+
+Link: (FALTA LINK)
+
+Description: We created a new subgraph in the graph explorer
+
 
 ## Team
 - Luis Mendez
