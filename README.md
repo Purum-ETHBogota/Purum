@@ -13,15 +13,15 @@ Purum enables landowners to pledge their lands for restoration initiatives. Init
 [Demo](https://purum.vercel.app/)
 
 ## How it's made?
-Purum issues geo-referenced NFTs on the @Polygon chain for ease of use, low transaction cost, and low environmental impact. 
+Purum issues geo-referenced NFTs on the @Polygon blockchain for ease of use, low transaction cost, and low environmental impact.
 
-Purum assumes the existence of a central authority that notarizes land deeds and validates land coordinates, this section of the solution uses an MD5 algorithm to encrypt the information and produce a hash that confirms ownership of land and coordinates. 
+Purum assumes the existence of a central authority that notarizes land deeds and validates land coordinates. This section of the solution uses @Worldcoin to prove the personhood of users and @thegraph for indexing and querying data from the different properties.
 
-This information is then used by the dapp to query an off-chain API called Agromonitoring and request NDVI data (Vegetation Index) and a satellite image of the land. Purum uses @Chainlink's AnyAPI to call the Agromonitoring API and get the land data. The image from Agromonitoring and the land coordinates are then stored in IPFS for decentralized storage. Purum also uses @Chainlink's Keepers to periodically call Agromoitoring and update an ecological state variable in the smart contract. 
+The dapp then uses land information to query an off-chain API called Agromonitoring and request NDVI data (Vegetation Index) and a satellite image of the land. Purum uses @Chainlink's AnyAPI to call the Agromonitoring API and get the land data. The image from Agromonitoring and the land coordinates are then stored in IPFS for decentralized storage. Purum also uses @Chainlink's Keepers to periodically call Agromoitoring and update an ecological state variable in the smart contract.
 
-Using the ecological state variable in the smart contract, Purum uses node.js to create a function that calculates the amount and rate of CO2 the land stores. Purum then uses @Superfluind to get mint a native CO2 token that gets streamed back to the NFT owner at the same rate CO2 gets stored. 
+Using the ecological state variable in the smart contract, Purum calculates the amount and rate of CO2 the land stores. Purum then uses @Superfluind to mint a native CO2 token that gets streamed back to the NFT owner at the same rate CO2 gets stored.
 
-Finally, Purum also uses Poket to access a decentralized RPC network.
+Finally, Purum uses the new @WalletConnect Modal to reduce the friction for new non-tech-savvy users and @Poket Nerwotk as RPC provider.
 
 ## Bounties we are applying for
 
